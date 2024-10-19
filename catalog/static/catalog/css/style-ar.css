@@ -1,0 +1,61 @@
+@media (min-width: 980px){
+
+body{
+	text-align: right !important;
+	/*direction:rtl*/
+}
+
+.navbar-brand,
+.navbar-header,
+.navbar-nav,
+.navbar-nav>li,
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9{
+    float: right !important;
+}
+
+.navbar-brand,
+.navbar-header,
+.navbar-nav,
+.navbar-nav>li{ float: left !important;
+}
+
+.navbar-toggle,
+.navbar-right, 
+.navbar-nav.navbar-right{
+    float: left !important;
+}
+
+.icons.list-inline {
+    -webkit-padding-start: 0px;
+}
+footer .fa-li {
+    color: #0ba3e1;
+    position: absolute;
+    right: 0;
+}
+.fa-ul>li {
+    padding-right: 30px;
+}
+.copy p {
+    text-align: center;
+}
+
+.col-md-offset-2 {
+    margin-left: 0 !important;
+    margin-right: 16.66666667% !important;
+}
+.text-left {
+    text-align: right !important;
+}
+
+nav.navbar.bootsnav.navbar-fixed .navbar-right {
+    float: left!important;
+}
+
+}
+
+.catalog_box .new strong {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}

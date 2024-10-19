@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load catalog_tags %}
+
+{% block content %}
+<div class="banner-home">
+  <div class="container-fluid">
+    <div class="cover">
+      <h1><strong>Коллекции</strong></h1>
+      <!--      <ol class="breadcrumb display">-->
+      <!--        <li class="breadcrumb-item"><a href="#">Главное</a></li>-->
+      <!--        <li class="breadcrumb-item active">Коллекции</li>-->
+      <!--      </ol>-->
+    </div>
+  </div>
+</div>
+
+
+<section class="catalog sub-page">
+  <div class="container-fluid">
+    <div class="row">
+      {% get_all_collections as collections %}
+      {% for collection in collections %}
+        {% if collection.is_published %}
+          {% include 'catalog/components/_collections_button.html' %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div>
+    </div>
+
+
+  </div>
+  <div class="clearfix"></div>
+
+</section>
+
+{% endblock content%}

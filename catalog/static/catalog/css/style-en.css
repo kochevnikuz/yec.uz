@@ -1,0 +1,8 @@
+@media (min-width: 980px){
+
+nav.navbar.bootsnav.navbar-fixed ul.nav > li > a {
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+}

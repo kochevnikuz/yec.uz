@@ -1,0 +1,12 @@
+{% load static %}
+<div class="banner-home">
+    <div class="container-fluid" id="slider">
+        <div class="owl-carousel owl-theme">
+            {% for slide in sliders %}
+                {% if slide.is_published %}
+                    <div class="item"><a href="#"><img class="img-responsive" src="{% static slide.image.url %}"></a></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

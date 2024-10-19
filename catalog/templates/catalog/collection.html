@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load catalog_tags %}
+
+{% block content %}
+<div class="banner-home">
+  <div class="container-fluid">
+    <div class="cover-p">
+      <div class="col-md-5">
+        <ol class="breadcrumb display">
+          <!--          <li class="breadcrumb-item"><a href="catalog.html">Главное</a></li>-->
+          <li class="breadcrumb-item"><a href="{% url 'catalog:catalog' %}">Коллекция</a></li>
+          <li class="breadcrumb-item active">
+            {% if collection_active.is_published %}
+              {{ collection_active.name }}
+            {% else %}
+              Закрыто
+            {% endif %}
+          </li>
+        </ol>
+<!--        <h1><strong>{{ collection.name }}</strong></h1>-->
+        <p><strong> Технические данные : </strong>{{ collection_active.description }}</p>
+      </div>
+
+      <!--      <div class="col-md-7 bg hidden-xs" style="background-image: url();"></div>-->
+    </div>
+  </div>
+</div>
+
+<section class="product-list sub-page">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container cate-list">
+        <div class="col-md-6 col-md-offset-3">
+          <p class="text-center">Выберите, чтобы увидеть другие наши модели ковров.</p>
+          <div class="p1">
+            <div class="col-md-4 hidden-xs">Предыдущая</div>
+            <div class="col-md-4 pageCatBox">
+              <span class="pageCatBoxTitle">
+                {% if collection_active.is_published %}
+                  {{ collection_active.name }}
+                {% else %}
+                  Закрыто
+                {% endif %}
+              </span>
+              <ul>
+                {% get_all_collections as collections %}
+                {% for collection in collections %}
+                  {%if not collection.id == collection_active.id and collection.is_published %}
+                    <li><a href="{{ collection.get_absolute_url }}">{{collection.name}}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="col-md-4 text-right hidden-xs">Следующая</div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      {% for carpet in carpets %}
+        {% include 'catalog/components/_carpet_list.html' %}
+      {% endfor %}
+
+    </div>
+
+
+  </div>
+  <div class="clearfix"></div>
+</section>
+
+{% endblock content%}

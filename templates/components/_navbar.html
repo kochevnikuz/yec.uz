@@ -1,0 +1,54 @@
+{% load static %}
+<header>
+  <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+    <div class="container-fluid padding0">
+
+      <div class="top-menu attr-nav">
+
+        <ul class="list-inline navbar-right language hidden-xs hidden-sm">
+          <li><a href="#">RU</a></li>
+<!--          <li><a href="index_us.html">EN</a></li>&ndash;&gt;-->
+        </ul>
+
+        <ul class="list-inline navbar-right">
+          <li class="social"><a href="https://www.facebook.com/yecgilamlari" target="_blank"><i
+            class="fab fa-facebook-f"></i></a></li>
+          <!--<li class="social"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>-->
+          <li class="social"><a href="https://www.instagram.com/yecgilam/" target="_blank"><i
+            class="fab fa-instagram"></i></a></li>
+          <!--<li class="social"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>-->
+        </ul>
+
+        <!--<ul class="list-inline navbar-right hidden-xs">
+            <li><a href="#" target="_blank" class="cblack">ОНЛАЙН <strong>ОПЛАТА</strong></a></li>
+            <li><a href="#" target="_blank" class="cblack">ВОЙТИ <strong>ДИЛЕР</strong></a></li>
+        </ul>-->
+
+        <ul class="list-inline navbar-right language hidden-lg hidden-md">
+          <li>
+            <select name="" id="" onchange="window.location.href=this.value">
+              <option value="#" selected="">RU</option> <!-- catalog.html?lang=ru -->
+              <!--								<option value="index_us.html?lang=en">EN</option>-->
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+          <i class="fa fa-bars"></i>
+        </button>
+                <a class="navbar-brand" href="{% url 'yec:index' %}"> <img src="{% static 'catalog/images/logo.png' %}" class="logo" alt="YEC GILAM"></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+          <li id="3"><a href="{% url 'yec:index' %}" title="ГЛАВНЫЙ">ГЛАВНЫЙ</a></li>
+          <li id="4"><a href="{% url 'yec:about' %}" title="О НАС">О НАС</a></li>
+          <li id="5"><a href="{% url 'catalog:catalog' %}" title="КОЛЛЕКЦИЯ">КОЛЛЕКЦИЯ</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

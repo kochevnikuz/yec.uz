@@ -1,0 +1,21 @@
+{% load static %}
+{% load main_page_tags %}
+<div class="col-xs-12" id="products">
+  <div class="row">
+    <h1 class="motto text-center"><span>НОВЫЕ</span> <strong>ПРОДУКЦИИ</strong></h1>
+    <div class="owl-carousel owl-theme">
+      {% get_new_carpets as carpets_list %}
+      {% for new_carpet in carpets_list %}
+      <div class="item">
+        <a href="{% static new_carpet.photo.url %}" class="fancybox">
+          <img src="{% static new_carpet.photo.url %}" class="img-responsive" alt="">
+          <span class="new"><strong>New</strong></span>
+        </a>
+        <h2 class="text-center">
+          <a href="{% static new_carpet.photo.url %}" class="fancybox">{{ new_carpet.code }}</a>
+        </h2>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

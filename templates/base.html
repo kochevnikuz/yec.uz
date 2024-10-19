@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="description"
+        content="С обретением независимости в нашей Республике стала функционировать одна из самых больших и процветающих ковровых фабрик в нашем регионе. В 2005 году в Узбекистане было создано узбекско- турецкое совместное предприятие ООО «Yasham — Erkaplan». Администрация Самаркандской области предоставила строительную площадку в промышленной зоне Самарканда, в поселке Фархад. Инвестиционный проект по строительству и оснащению завода был успешно завершен в июле 2006 года. Таким образом, стал функционировать один из самых больших производителей ковров на территории республики Узбекистан.">
+  <meta name="keywords" content="Ковры, Самарканд, Samarkand, carpet, YEC, Yasham Erkaplan Carpet, ">
+  <meta name="Robots" content="ALL">
+  <meta name="Distribution" content="Global">
+  <meta name="Rating" content="General">
+  <meta name="Revisit-after" content="1">
+  <meta name="Copyright" content="anatolmedia">
+  <meta name="generator" content="anatolmedia.net">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="Yo-HswOK_YGIWnmNwDTxS3msfy_ymM8ifKtwOfUiZ30">
+  <link rel="shortcut icon" href="{% static 'catalog/images/icons/favicon.ico' %}" type="image/x-icon">
+  <link rel="icon" href="uploads/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="{% static 'catalog/images/icons/apple-icon-57x57.png' %}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{% static 'catalog/images/icons/apple-icon-60x60.png' %}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'catalog/images/icons/apple-icon-72x72.png' %}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'catalog/images/icon/apple-icon-76x76.png' %}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'catalog/images/icon/apple-icon-114x114.png' %}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{% static 'catalog/images/icon/apple-icon-120x120.png' %}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{% static 'catalog/images/icon/apple-icon-144x144.png' %}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{% static 'catalog/images/icon/apple-icon-152x152.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'catalog/images/icon/apple-icon-180x180.png' %}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'catalog/images/icon/android-icon-192x192.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'catalog/images/icon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{% static 'catalog/images/icon/favicon-96x96.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'catalog/images/icon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'catalog/images/icon/manifest.json' %}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="#">
+  <meta name="theme-color" content="#ffffff">
+  <title>{{ title }}</title>
+
+  <link href="{% static 'catalog/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/style1.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/owl.theme.default.min.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/animate.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/bootsnav.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/hover-min.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/hamburgers.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/fontawesome-all.css' %}" rel="stylesheet">
+  <link href="{% static 'catalog/css/sweetalert.css' %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'catalog/css/jquery.fancybox.css' %}">
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="{% static 'catalog/js/js.js' %}"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'UA-59967416-1');
+  </script>
+
+</head>
+<body class="">
+{% include 'components/_navbar.html' %}
+<div class="clearfix"></div>
+
+<!--
+<div class="card">
+   <a  class="fancybox-media" href="templates/v2/img/popup.png"></a>
+ </div>
+-->
+{% block content %}{% endblock content %}
+
+{% include 'components/_footer.html' %}
+
+<script src="{% static 'catalog/js/jquery.min.js' %}"></script>
+<script src="{% static 'catalog/js/bootstrap.min.js' %}"></script>
+<!--<script>-->
+<!--    $(document).ready(function () {-->
+<!--        jQuery(function () {-->
+<!--            var page = location.pathname.split('/').pop();-->
+<!--            $('.nav li a[href="' + page + '"]').parent().addClass('active')-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+
+<!-- Bootsnavs -->
+<script src="{% static 'catalog/js/bootsnav.js' %}"></script>
+<script>
+    $(window).scroll(function () {
+        var sc = $(window).scrollTop()
+        if (sc > 85) {
+            $(".dark").addClass("color")
+        } else {
+            $(".dark").removeClass("color")
+        }
+    });
+</script>
+
+<script src="{% static 'catalog/js/owl.carousel.min.js' %}"></script>
+<script>
+    $(function () {
+        $('#slider .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            nav: true,
+            dots: false,
+            navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        $('#products .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            nav: true,
+            dots: false,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
+
+<script src="{% static 'catalog/js/wow.js' %}"></script>
+<script>
+    new WOW().init();
+</script>
+
+<script src="{% static 'catalog/js/sweetalert.min.js' %}"></script>
+
+<script>
+    function bulten() {
+
+        $('#subscribe_btn').hide();
+
+        var mail = $('#bultenForm input[name="mail"]').val();
+
+        if (mail == '') {
+            swal("Ошибка !", "Пожалуйста, введите свои данные полностью и правильно для регистрации....");
+            $('#subscribe_btn').show();
+        } else {
+
+            $.post("include/3rdparty/subscribe.php", {"mail": mail}, function (al) {
+                if (al == "1") {
+                    swal("Завершено !", "Вы зарегистрировались. Мы благодарим Вас.");
+                    document.getElementById("bultenForm").reset();
+                    $('#subscribe_btn').show();
+                } else if (al == "2") {
+                    swal("E-Posta Adresi boş olamaz.");
+                    $('#subscribe_btn').show();
+                } else if (al == "3") {
+                    swal("Пожалуйста, введите действительный адрес электронной почты.");
+                    $('#subscribe_btn').show();
+                } else {
+                    swal("Ошибка !", "Что-то пошло не так.");
+                    $('#subscribe_btn').show();
+                }
+
+            });
+        }
+    }
+</script>
+<script src="{% static 'catalog/js/jquery.fancybox.min.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $(".fancybox").fancybox({
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+
+        $(".pageCatBoxTitle").click(function () {
+            $(".pageCatBox ul").slideToggle(400);
+        });
+
+        $(".fancybox-media").fancybox().trigger('click');
+
+        $('.fancybox-media').fancybox({
+            openEffect: 'none',
+            closeEffect: 'none',
+            autoPlay: false,
+            helpers: {
+                media: {}
+            }
+        });
+
+    });
+</script>
+
+<script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '500',
+            width: "100%",
+            videoId: 'KeL4M7Zqtks',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+
+    function stopVideo() {
+        player.stopVideo();
+    }
+</script>
+
+</body>
+</html>

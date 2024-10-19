@@ -1,0 +1,19 @@
+{% load static %}
+<div class="col-md-3 col-xs-6">
+  <div class="catalog_box">
+    <a href="{{ collection.get_absolute_url }}"><img src="{% static collection.image.url %}" class="img-responsive" alt="{{ collection.name }}">
+      <span>Смотреть<br><i class="fas fa-arrow-right"></i></span>
+    </a>
+    <div class="new">
+      <strong>
+        {% if collection.type.name == "Ковер" %}
+        Carpet
+        {% elif collection.type.name == "Тафтинг" %}
+        Tuft
+        {% else %}
+        Неизвестно
+        {% endif %}
+      </strong>
+    </div>
+  </div>
+</div>

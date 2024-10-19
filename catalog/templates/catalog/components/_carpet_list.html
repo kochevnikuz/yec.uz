@@ -1,0 +1,14 @@
+{% load static %}
+{% if carpet.is_published %}
+<div class="col-md-2 col-xs-6">
+  <div class="product_box">
+    <a href="{% static carpet.photo.url %}" class="fancybox img" data-caption="{{ carpet.code }}"><img
+      src="{% static carpet.photo.url %}" class="img-responsive" alt="{{ carpet.code }}"></a>
+    <h2>{{ carpet.code }}</h2>
+    <span><strong class="new">{{ carpet.created_at|date:"m.Y" }}</strong></span>
+    {% if carpet.roll %}
+    <img src="{%  static 'photos/makas.png' %}" class="img-responsive rulo" alt="Рулонного типа">
+    {% endif %}
+  </div>
+</div>
+{% endif %}

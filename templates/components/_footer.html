@@ -1,0 +1,97 @@
+{% load static %}
+<footer>
+  <div class="container-fluid padding0">
+
+    <div class="col-md-12 col-xs-12 display">
+      <div class="container p-50">
+        <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2 form">
+          <p class="motto text-center"><strong>ПОДПИСАТЬСЯ НА ЭЛЕКТРОННУЮ БЮЛЛЕТЕНЬ</strong></p>
+          <p class="text-center">Будьте в курсе всех нововведений ковров YEC</p>
+          <form action="javascript:;" onsubmit="bulten();" id="bultenForm" autocomplete="off">
+            <div class="col-md-9 col-xs-9 padding0">
+              <input type="text" name="mail" placeholder="Ваша электронная почта..." class="form-control">
+            </div>
+            <div class="col-md-3 col-xs-3 padding0">
+              <button class="btn" id="subscribe_btn"><strong>Подписывайся</strong></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 col-xs-12 bg p-50">
+      <div class="container padding0">
+        <img class="img-responsive follow" src="{% static 'catalog/images/follow1.png' %}">
+        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 social">
+          <ul class="list-inline">
+            <li><a href="https://www.facebook.com/yecgilamlari" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <!--<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>-->
+            <li><a href="https://www.instagram.com/yecgilam/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <!--<li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>-->
+          </ul>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 padding0 cont display">
+          <ul class="list-inline">
+            <li>
+              <ul class="footer_menu">
+                <li>
+                  <div class="title"><strong>МУЛЬТИМЕДИА</strong></div>
+                </li>
+                <li id="120"><a href="warranty-conditions_ru.html" title="Условия гарантии">Условия гарантии</a></li
+                <li id="121"><a href="usage-instruction_ru.html" title="Инструкция по использованию">Инструкция по
+                  использованию</a></li>
+                <li id="123"><a href="https://www.youtube.com/watch?v=KeL4M7Zqtks" title="Video YouTube">Video
+                  YouTube</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="footer_menu">
+                <li>
+                  <div class="title"><strong>DEALER</strong></div>
+                </li>
+                <li id="124"><a href="#" title="Dealer Login">Dealer Login</a></li>
+                <li id="125"><a href="#" title="Dealer Application Form">Dealer Application Form</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <ul class="footer_menu">
+                <li>
+                  <div class="title"><strong>КОРПОРАТИВНЫЙ</strong></div>
+                </li>
+                <li><a href="#">О Нас</a></li>
+              </ul>
+            </li>
+            <li>
+
+              <ul class="footer_menu">
+                <li>
+                  <div class="title"><strong>ДЛЯ ИНФОРМАЦИИ И КОММУНИКАЦИИ;</strong></div>
+                  Адрес: г.Самарканд, посёлок Фархад 25-А, Узбекистан
+                </li>
+                <li class=""><br>Tel: <a href="tel://+998901991700">+99(890) 199 1700 </a>
+                  Электронная почта: <a href="mailto:infoyec.uz@gmail.com" target="_top">infoyec.uz@gmail.com</a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-12 col-xs-12">
+      <div class="container copy">
+        <div class="copy-in col-md-11 col-xs-12 padding0">
+          <div>Copyright &copy; {% now "Y" %} <strong>YASHAM ERKAPLAN CARPET</strong> | Все права защищены.</div>
+        </div>
+        <!--<div class="copy-in col-md-1 col-xs-12 padding0">
+            <a title="Anatolmedia" href="index.htm" target="_blank"><img class="img-responsive" alt="Gaziantep Web Tasarım" src="templates/v2/img/anatolmedia_red.svg"></a>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</footer>
