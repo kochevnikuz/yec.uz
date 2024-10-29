@@ -1,6 +1,8 @@
+from lib2to3.fixes.fix_input import context
+
 from django.shortcuts import render
 from .models import Collection, Carpet
-
+from .forms import CarpetAddForm
 
 # Create your views here.
 def show_catalog(request):
@@ -35,3 +37,16 @@ def carpets_by_date(request, year, month, collection_active_id):
     }
     # Возвращаем результат в шаблон
     return render(request, 'catalog/carpets_by_date.html', context=context)
+
+def add_carpet(request):
+    if request.method == 'POST':
+        pass
+    else:
+        form = CarpetAddForm()
+
+    context = {
+        'form': form,
+        'title': 'Добавить Ковер'
+    }
+
+    return render(request, template_name='catalog/carpet_add_page.html', context=context)
