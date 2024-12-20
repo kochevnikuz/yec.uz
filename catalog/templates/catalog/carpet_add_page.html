@@ -14,41 +14,93 @@
         </div>
     </div>
 </div>
+<div class="container mt-5">
+    <h2 class="mb-4">Форма ввода данных</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <!-- Поле для ввода текста: Code -->
+        <div class="mb-3">
+            <label for="code" class="form-label">Code</label>
+            <input type="text" class="form-control" id="code" name="code" placeholder="Введите код" required>
+        </div>
 
-<div class="col-md-12 col-xs-12 p-50 form">
-    <div class="col-md-3 col-xs-12 padding0">
-        <p class="motto">Carpet <strong>add Form</strong></p>
-        <div class=" display"></div>
-        <p class="desc">Please fill in the fields below,</p>
-    </div>
+        <!-- Поле для загрузки файла: Photo -->
+        <div class="mb-3">
+            <label for="photo" class="form-label">Фото ковра</label>
+            <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required>
+        </div>
 
-    <div class="col-md-8 col-md-offset-1 col-xs-12 col-xs-offset-0">
-        <form method="POST">
-            <div class="form-group col-md-6 col-xs-12">
-                <input type="text" class="form-control" name="ad" value="" placeholder="Name">
-            </div>
+        <!-- Чекбокс для Boolean значений: Is_published -->
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="is_published" name="is_published" checked>
+            <label class="form-check-label" for="is_published">Публиковать</label>
+        </div>
 
-            <div class="form-group col-md-6 col-xs-12">
-                <input type="text" class="form-control" name="soyad" value="" placeholder="Surname">
-            </div>
+        <!-- Выпадающий список: Collection -->
+        <div class="mb-3">
+            <label for="collection" class="form-label">Collection</label>
+            <select class="form-select" id="collection" name="collection" required>
+                <option value="" disabled selected>Выберите коллекцию</option>
+                <option value="1">Collection 1</option>
+                <option value="2">Collection 2</option>
+                <option value="3">Collection 3</option>
+            </select>
+        </div>
 
-            <div class="form-group col-md-6 col-xs-12">
-                <input type="tel" class="form-control" name="telefon" value="" placeholder="Phone">
-            </div>
+        <!-- Чекбокс для Boolean значений: Roll -->
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="roll" name="roll">
+            <label class="form-check-label" for="roll">Roll</label>
+        </div>
 
-            <div class="form-group col-md-6 col-xs-12">
-                <input type="mail" class="form-control" name="email" value="" placeholder="E-mail Address">
-            </div>
-
-            <div class="form-group col-md-10 col-xs-12">
-                <textarea class="form-control" rows="5" name="mesaj" placeholder="Message"></textarea>
-            </div>
-
-            <div class="form-group col-md-2 col-xs-12">
-                <button type="submit" class="btn btn-default"><strong>Добавить</strong></button>
-            </div>
-        </form>
-    </div>
+        <!-- Кнопка отправки формы -->
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
 </div>
+
 <div class="clearfix"></div>
 {% endblock content%}
+
+<!--<div class="mb-3">-->
+<!--                <label for="formGroupExampleInput" class="form-label">Код продукта</label>-->
+<!--                <input type="text" class="form-control" id="formGroupExampleInput"-->
+<!--                       placeholder="Введите код ковра">-->
+<!--            </div>-->
+
+
+<!--            <div class="mb-3">-->
+<!--                <label for="formFile" class="form-label">Укажете файл - фото </label>-->
+<!--                <input class="form-control" type="file" id="formFile">-->
+<!--            </div>-->
+
+
+<!--            <div class="mb-3 form-check">-->
+<!--                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>-->
+<!--                <label class="form-check-label" for="flexCheckChecked">-->
+<!--                    Опубликовать-->
+<!--                </label>-->
+<!--            </div>-->
+
+
+<!--            <div class="col-md-3">-->
+<!--                <label for="validationCustom04" class="form-label">Коллекция</label>-->
+<!--                <select class="form-select" id="validationCustom04" required>-->
+<!--                    <option selected disabled value="">Choose...</option>-->
+<!--                    <option>...</option>-->
+<!--                </select>-->
+<!--                <div class="invalid-feedback">-->
+<!--                    Выбирете коллекцию ковра-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-check">-->
+<!--                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">-->
+<!--                <label class="form-check-label" for="flexRadioDefault1">-->
+<!--                   Ковер-->
+<!--                </label>-->
+<!--            </div>-->
+<!--            <div class="form-check">-->
+<!--                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>-->
+<!--                <label class="form-check-label" for="flexRadioDefault2">-->
+<!--                    Тафтинг-->
+<!--                </label>-->
+<!--            </div>-->
